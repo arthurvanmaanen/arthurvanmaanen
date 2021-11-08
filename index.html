@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="nl">
+<!-- Standaard opening van de html -->
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Arthur van Maanen">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Hier staat de titel -->
+
+			<title>Gemeente Amsterdam</title>
+
+			<!-- De link naar het css bestand -->
+
+				<link href="../styles/style.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<header>
+			<!-- Het rode logo in een link. met Met een relatieve uitkomst dus url naar eigen site In een section, het
+				witte vlak boven de site.-->
+				<section>
+					<a href="index.html"><img src="../img/amsterdam.png" alt="logo van Gemeente Amsterdam"></a>
+
+					<!-- In een ul met li's vind je mijn amsterdam en english, deze is in de section te vinden die samen
+						met de rest de header vormen -->
+						<ul>
+							<li>Mijn Amsterdam</li>
+							<li>English site</li>
+						</ul>
+				</section>
+				<!-- In deze section zit het hamburger menu en het zoek icon. Met de span maak ik een hamburgermenu en
+					ik werk deze uit op css -->
+					<section>
+						<div>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<!-- Hier staat het loop icon van zoeken in een link in de section -->
+							<a href="#"><img alt="search icon" src="img/icons/loupe.png"></a>
+
+					</section>
+
+					<!-- een formulier met het label search voor de input zoeken met de waarde submit-->
+						<form>
+							<label>Search..</label>
+							<input placeholder="zoeken..." type="text">
+							<input type="submit" value="">
+						</form>
+						<!-- Navigatie met een ul, het eerste list item gaat naar de afval pagina, de list items zijn
+							niet klikbaar, -->
+							<nav>
+								<ul>
+									<li><a href="#">Onderwerpen</a><a href="#"><img src="#" alt="arrow"></a>
+										<ul>
+											<li><a href="afval.html">afval</a></li>
+											<li><a href="#">Belastingen en heffingen</a></li>
+											<li><a href="#">Bestuur en Organisatie</a></li>
+											<li><a href="#">Bouw- en verkeersprojecten</a></li>
+
+										</ul>
+									</li>
+									<li><a href="#">Nieuws</a></li>
+									<li><a href="#">Contact</a></li>
+								</ul>
+							</nav>
+		</header>
+		<!-- Hier begint de body van de pagina, rechts in de hoek kun je de verticale mening button vinden deze heb ik
+			met een button tag gemaakt -->
+			<main>
+				<button class="mening-knop">Uw mening</button>
+
+				<!-- In deze section staat het nieuws in het blauwe vak boven de afbeelding.-->
+					<section>
+						<article>
+							<h2>Nieuws</h2>
+							<ul>
+
+								<li><a href="#">Nieuwe, strengere coronamaatregelen</a></li>
+								<li><a href="#">De laatste sluiproute naar meer hotels is dicht</a></li>
+								<li><a href="#">Snorfietsers opgelet: er komt camerahandhaving</a></li>
+								<li><a href="#">Coronabesmettingen in Amsterdam</a></li>
+
+							</ul>
+						</article>
+					</section>
+
+					<!-- In deze section heb ik articels geplaatst op losse containers te maken. deze containers, in
+						deze containers zit een h3 en een afbeelding die een icons moeten voorstellen-->
+						<section>
+							<article>
+								<h3>Stadsloket: afspraak maken en locaties</h3>
+								<img src="img/icons/tool.png" alt="Icon for ....">
+							</article>
+							<article>
+								<h3>Parkeervergunning</h3>
+								<img src="img/icons/car.png" alt="Icon for ....">
+							</article>
+							<article>
+								<h3>Paspoort, ID-kaart en rijbewijs</h3>
+								<img src="img/icons/id-card.png" alt="Icon for ....">
+							</article>
+							<article>
+								<h3>Corona virus</h3>
+								<img src="img/icons/virus.png" alt="Icon for ....">
+							</article>
+							<article>
+								<h3>Melding openbare ruimte en overlast</h3>
+								<img src="img/icons/danger.png" alt="Icon for ....">
+							</article>
+							<article>
+								<h3>Verhuizing doorgeven</h3>
+								<img src="img/icons/home (1).png" alt="Icon for ....">
+							</article>
+							<article>
+								<h3>Grof afval</h3>
+								<img src="img/icons/trash.png" alt="Icon for ....">
+							</article>
+							<article>
+								<h3>Kennisgeving en bekendmaking</h3>
+								<img src="img/icons/speak.png" alt="Icon for ....">
+							</article>
+						</section>
+						<!-- In deze section staan alle onderwerpen, deze zijn geformuleerd in een ul met listitems -->
+							<section class="onderwerpen">
+								<h3>Alle Onderwerpen</h3>
+								<ul>
+									<li>Nieuws</li>
+									<li>Afval</li>
+									<li>Belastingen en heffingen</li>
+									<li>Bestuur en organisatie</li>
+									<li>Bouw- en verkeersprojecten</li>
+								</ul>
+								<ul>
+									<li>Burgerzaken</li>
+									<li>Buurten</li>
+									<li>Contact</li>
+									<li>Kunst en cultuur</li>
+									<li>Ondernemen</li>
+								</ul>
+								<ul>
+									<li>Onderwijs en jeugd</li>
+									<li>Parkeren en verkeer</li>
+									<li>Sport</li>
+									<li>Subsidies</li>
+									<li>Vrije tijd</li>
+								</ul>
+								<ul>
+									<li>Werk en inkomen</li>
+									<li>Wonen en leefomgeving</li>
+									<li>Zorg en ondersteuning</li>
+								</ul>
+
+								</ul>
+								<!-- Ik gebruik een hr om een horizontale lijn te plaatsen-->
+									<hr>
+							</section>
+
+							<section>
+								<h4>Deel deze pagina</h4>
+								<ul>
+									<li><a><img src="img/icons/facebook.png" alt="logo"></a></li>
+									<li><a><img src="img/icons/twitter.png" alt="logo"></a></li>
+									<li><a><img src="img/icons/in.png" alt="logo"></a></li>
+									<li><a><img src="img/icons/facebook.png" alt="logo"></a></li>
+									<li><a><img src="img/icons/facebook.png" alt="logo"></a></li>
+
+								</ul>
+							</section>
+			</main>
+			<footer>
+				<section>
+					<article>
+						<h4>Contact</h4>
+						<section>
+							<p>Hebt u een vraag en kunt u het antwoord niet vinden op deze website? Neem dan contact met
+								ons op.</p>
+							<ul>
+								<li><a href="#">Contactformulier</a></li>
+
+								<li><strong>Bel het telefoonnummer <a href="tel:14020">14 020</a></strong>
+									maandag tot en met vrijdag van 08.00 tot 18.00 uur
+								</li>
+
+								<li><a href="https://www.amsterdam.nl/contact/">Contactgegevens en openingstijden</a>
+								</li>
+							</ul>
+						</section>
+					</article>
+
+					<article>
+						<h4>Volg de gemeente</h4>
+						<section>
+							<ul>
+								<li>Nieuws</li>
+								<li>Afval</li>
+								<li>Belastingen en heffingen</li>
+								<li>Bestuur en organisatie</li>
+								<li>Bouw- en verkeersprojecten</li>
+							</ul>
+						</section>
+					</article>
+
+					<article>
+						<h4>Uit in Amsterdam</h4>
+						<section>
+							<p>Benieuwd wat er allemaal te doen is in de stad? Op&nbsp;<a
+									href="https://www.iamsterdam.com">Iamsterdam.com</a>
+								vindt u de beste tips op het gebied van cultuur, uitgaan en evenementen.</p>
+						</section>
+					</article>
+				</section>
+				<section>
+					<ul>
+						<li><a>Over deze site</a></li>
+						<li><a>Privacy</a></li>
+						<li><a>Cookies op de site</a></li>
+						<li><a>Webarchief</a></li>
+					</ul>
+				</section>
+			</footer>
+			<script src="scripts/script.js"></script>
+
+	</body>
+
+</html>
