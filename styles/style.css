@@ -1,0 +1,656 @@
+/* CSS Document */
+/*gegenereerde inhoud positioneel vóór de elementinhoud komt.
+De ::after-inhoud is ook "na" in de bronvolgorde, dus deze zal bovenop ::before worden geplaatst als 
+deze op natuurlijke wijze op elkaar wordt gestapeld. 
+De eigenschap box-sizing definieert hoe de breedte en hoogte van een 
+element worden berekend: moeten ze opvulling en randen bevatten of niet. Borderbox De eigenschappen width en 
+height (en min/max-eigenschappen) omvatten inhoud, opvulling en rand */
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*font family voor de hele body de gemeente Amsterdam heeft een zelfgemaakte font
+en dit is een font die het meeste in de buurt komt*/
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+/*de lijst bevat geen teken*/
+ul {
+  list-style-type: none;
+}
+/*er wordt geen lijn getrokken en alle bestaande decoraties worden verwijderd.*/
+a {
+  text-decoration: none;
+}
+
+/*HEADER mobiel index.html */
+
+header section:first-of-type {
+  display: flex;
+  padding: 1em;
+  max-width: 600px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+header section:first-of-type img {
+  width: 100%;
+  max-width: 150px;
+}
+
+header section:first-of-type ul {
+  display: none;
+}
+
+header nav {
+  z-index: 10;
+  position: absolute;
+  max-height: 0;
+  transition: max-height 0.5s;
+  overflow: hidden;
+}
+
+header nav ul {
+  width: 85vw;
+  background-color: #f5f5f5;
+}
+
+header nav ul li {
+  padding: 1em;
+  border-top: 1px solid #e6e6e6;
+}
+
+header nav ul li ul {
+  display: none;
+}
+
+header nav.show {
+  max-height: 100vh;
+}
+
+header section:nth-of-type(2) {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8em;
+  background-color: #f5f5f5;
+  max-height: 44px;
+}
+
+header section:nth-of-type(2) a img {
+  width: 20px;
+}
+
+/* hamburger menuutje */ /* ======= HAMBURER MENU ======= */
+
+header section div span {
+  display: block;
+  background-color: black;
+  width: 20px;
+  height: 2px;
+  margin-bottom: 5px;
+  transition: 0.5s;
+}
+
+header span:first-of-type.barChange {
+  transform: rotate(-45deg) translate(-8px, 5px);
+}
+
+header span:nth-of-type(2).barChange {
+  opacity: 0;
+}
+
+header span:last-of-type.barChange {
+  transform: rotate(45deg) translate(-5px, -3px);
+}
+
+header form {
+  display: flex;
+  padding: 0;
+  background-color: #eee;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+header form label {
+  display: none;
+}
+
+header form input[type="text"] {
+  width: 70%;
+  height: 40px;
+  padding: 1em;
+  margin-right: 16px;
+}
+
+header form input[type="text"]::placeholder {
+  font-size: 1.5em;
+}
+
+header form input[type="submit"] {
+  background-color: #ec0000;
+  width: 40px;
+  height: 40px;
+  padding: 1em;
+  background-image: url("../img/icons/zoeken.svg");
+  background-size: 25px 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+header form.show {
+  padding: 1em;
+  max-height: 100vh;
+  z-index: 10;
+}
+
+header a {
+  color: unset;
+  text-decoration: unset;
+}
+
+/*padding drukt de button naar buiten, posittion fixed
+zorgd dat de knop blijft staan. Door de z index
+stapelt de knop poven op de andere lagen. door de transform draait de knop 
+90 graden.*/
+
+.mening-knop {
+  font-weight: bold;
+  padding: 0.6em 1.4em;
+  background-color: rgb(245, 47, 47);
+  color: #fff;
+  position: fixed;
+  z-index: 9999;
+  right: 0;
+  transform: rotate( -90deg) translate(-10em, 2.8em);
+  border: none;
+  font-size: 1.1em;
+}
+
+/*Hier geef ik de hele main paddingn margin en max width*/
+
+main {
+  padding: 18px 1em 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+main section.dimmer {
+  display: none;
+}
+
+main section.dimmer.show {
+  display: inline;
+  background-color: #000;
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  height: 500vh;
+  width: 100%;
+  z-index: 1;
+}
+
+/*article*/
+
+main section.nieuws {
+  position: relative;
+  background-image: url("../img/oosterpark-herfst_alphons-nieuwenhuis.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 110vw;
+  max-height: 415px;
+}
+
+main section.nieuws article {
+  position: absolute;
+  background-color: #004699;
+  margin: 10px;
+  padding: 2em 1em;
+  color: #fff;
+  bottom: 10px;
+}
+
+main section.nieuws article ul li {
+  padding: 0.2em 0;
+}
+
+main section.nieuws article ul li::before {
+  content: ">";
+  width: 1em;
+  height: 1em;
+  margin-right: 1em;
+}
+
+main section.nieuws article ul li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+main section.nieuws article ul li a:hover {
+  text-decoration: underline;
+}
+/* flex wrap gebruikt voor responsivenes om te zorgen dat elementen niet uitschieten maar enetert*/
+main section.burgerzaken {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 1em 0;
+}
+
+main section.burgerzaken article {
+  background-color: #f5f5f5;
+  border-bottom: 2px solid #e6e6e6;
+  border-right: 2px solid #e6e6e6;
+  width: 100%;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  transition: 0.5s;
+}
+
+main section.burgerzaken article:hover {
+  border-bottom: 2px solid #ec0000;
+  border-right: 2px solid #ec0000;
+  transform: scale(1.05);
+}
+
+main section.burgerzaken article>* {
+  margin-bottom: 1em;
+}
+
+main section.burgerzaken article img {
+  width: 30px;
+  order: 1;
+}
+
+main section.burgerzaken article h3 {
+  order: 2;
+  font-size: 1em;
+}
+
+main section.onderwerpen h3 {
+  font-size: 1.3em;
+  margin-bottom: .5em;
+}
+
+main section.onderwerpen ul li {
+  font-size: 1em;
+  font-weight: 700;
+  margin-bottom: .5em;
+}
+
+main section.onderwerpen ul li::before {
+  content: ">";
+  width: 20px;
+  height: 20px;
+  margin-right: .5em;
+}
+
+main section.onderwerpen hr {
+  border: 1px solid #000;
+  margin: 1em 0;
+  ;
+}
+
+main section.delen h4 {
+  margin: 1em 0;
+}
+
+main section.delen ul {
+  display: flex;
+  margin-bottom: 3em;
+}
+
+main section.delen ul li {
+  margin: 0 .2em;
+  border: 1px solid black;
+  padding: .25em;
+  width: 30px;
+  height: 30px;
+}
+
+main section.delen ul li a img {
+  width: 100%;
+  max-width: 25px;
+  filter: grayscale(100%);
+}
+
+footer {}
+
+footer section:first-of-type {
+  padding: 30px 1em;
+  color: #fff;
+  background-color: #767676;
+  font-size: 1.2em;
+}
+
+footer section:first-of-type>article {
+  padding-bottom: 0.8em;
+}
+
+footer section:first-of-type>article h4 a {
+  display: block;
+  margin: .5em 0;
+  color: #fff;
+}
+
+footer section:first-of-type>h4 a::before {
+  content: "v";
+  width: 20px;
+  height: 20px;
+  margin-right: .5em;
+}
+
+footer section:first-of-type>article section {
+  display: none;
+}
+
+footer section:first-of-type>article section.show {
+  display: inline;
+}
+
+footer section:first-of-type article:first-of-type ul {
+  margin-left: 2em;
+}
+
+footer section:first-of-type ul li {
+  padding: .5em 0;
+}
+
+footer section:first-of-type ul li::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  margin-right: .5em;
+}
+
+footer section:first-of-type ul li a, footer section article a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer>section:last-of-type {
+  padding: 1em;
+  margin: auto;
+  background-color: white;
+  color: black;
+  display: flow-root;
+}
+
+footer>section:last-of-type ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer>section:last-of-type ul li {
+  white-space: nowrap;
+  margin-right: 20px;
+}
+
+footer>section:last-of-type ul li::before {
+  content: ">";
+  width: 20px;
+  height: 20px;
+  margin-right: .2em;
+  /*color:white;*/
+}
+
+footer>section:last-of-type ul li a {
+  font-weight: 600;
+  font-size: .875rem;
+}
+
+/* afval pagina */
+
+main.afvalPage a:first-of-type {
+  color: #ddd;
+}
+
+main.afvalPage section.hero {
+  background-image: none;
+  height: unset;
+}
+
+main.afvalPage section.hero h1 {
+  margin: 1em 0;
+}
+
+main.afvalPage section.hero article {
+  position: unset;
+  background-color: unset;
+  padding: 0;
+  width: 100%;
+}
+
+main.afvalPage section.hero article h3 {
+  font-size: 0;
+}
+
+main.afvalPage section.hero article img {
+  width: 100%;
+}
+
+main.afvalPage section.burgerzaken article h3 {
+  order: unset;
+  font-size: 1em;
+}
+
+main.afvalPage section.burgerzaken article {
+  border-bottom: 4px solid #000;
+  border-right: 4px solid #000;
+  min-height: 150px;
+}
+
+main.afvalPage section.burgerzaken article h3 {
+  order: 1;
+}
+
+main.afvalPage section.burgerzaken article p {
+  order: 2;
+}
+
+main.afvalPage section.afvalOnderwerpen section {
+  margin-bottom: 20px;
+}
+
+main.afvalPage section.afvalOnderwerpen section h3 {
+  margin-top: 5px;
+  margin-bottom: 17px;
+}
+
+main.afvalPage section.afvalOnderwerpen section ul li::before {
+  content: ">";
+  width: 20px;
+  height: 20px;
+  margin-right: .5em;
+}
+
+main.afvalPage section.afvalOnderwerpen section ul li {
+  margin-bottom: 3px;
+}
+
+
+@media only screen and (min-width: 1025px) {
+  header section:first-of-type {
+    max-width: 960px;
+  }
+  header section:first-of-type ul {
+    display: flex;
+  }
+  header section:first-of-type ul li {
+    padding: 1em;
+  }
+  header section:first-of-type ul li::before {
+    content: ">";
+    width: 20px;
+    height: 20px;
+    margin-right: .5em;
+  }
+  header section:nth-of-type(2) {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-left: calc((100% - 960px)/2);
+    padding-right: calc((100% - 960px)/2);
+  }
+  header section:nth-of-type(2) div {
+    display: none;
+  }
+  header form {
+    position: absolute;
+  }
+
+  header nav {
+    display: block;
+    z-index: 10;
+    max-height: unset;
+    overflow: unset;
+    margin-top: 0.5em;
+    padding-left: calc((100% - 960px)/2);
+  }
+  header nav ul {
+    display: flex;
+    background-color: unset;
+    border: unset;
+    transform: translateY(-55px);
+    width: 50vw;
+  }
+  header nav ul li {
+    border: unset;
+  }
+  header nav ul li ul {
+    display: inline;
+  }
+  header nav ul li ul li {
+    background-color: #eee;
+    font-size: 1em;
+    font-weight: 700;
+  }
+  header nav ul li ul li::before {
+    content: ">";
+    width: 20px;
+    height: 20px;
+    margin-right: .5em;
+  }
+  header nav ul li:hover ul {
+    display: block;
+    width: 100vw;
+    position: absolute;
+    margin-top: 67px;
+    left: 0;
+  }
+  header nav ul li ul {
+    display: none;
+  }
+  header nav ul li:first-of-type a:nth-of-type(2) {
+    display: none;
+  }
+  header nav ul li a:hover {
+    text-decoration: underline;
+  }
+  main {
+    max-width: 960px;
+  }
+
+  main section.nieuws {
+    position: relative;
+    background-image: url("../img/oosterpark-herfst_alphons-nieuwenhuis.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 415px;
+    z-index: -10;
+  }
+  
+  main section.nieuws article {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  main section.burgerzaken{
+    display: block;
+    columns: 4;
+  }
+
+  main section.burgerzaken article{
+    height: 126px;
+  }
+  main section.onderwerpen {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  main section.onderwerpen h3 {
+    width: 100%;
+  }
+  main section.onderwerpen ul {
+    columns: 4;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 40px;
+  }
+  main section.onderwerpen hr {
+    width: 100%;
+  }
+
+  main section.delen {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4em;
+  }
+
+  main section.delen ul{
+    margin-bottom: 0;
+    padding-inline-start: 20px;
+  }
+
+  footer section:first-of-type, footer>section:last-of-type {
+    padding-left: calc((100% - 960px)/2);
+    padding-right: calc((100% - 960px)/2);
+  }
+  footer section:first-of-type {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer section:first-of-type>a::before {
+    content: "";
+  }
+  footer section:first-of-type article {
+    width: 33%;
+    margin: 0 1em;
+  }
+  footer section:first-of-type article h4 {
+    margin-bottom: 0.5em;
+  }
+
+  footer section:first-of-type article section {
+    display: block;
+    padding-top: 0;
+    font-size: 16px;
+  }
+
+  footer section:first-of-type article:nth-of-type(2) ul li::before {
+    content: ">";
+    background-color: unset;
+  }
+  footer section article p a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  main.afvalPage section.afvalOnderwerpen {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  main.afvalPage section.afvalOnderwerpen section {
+    width: 220px;
+  }
+}

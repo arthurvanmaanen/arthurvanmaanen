@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="nl">
+<!-- Standaard opening van de html -->
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Arthur van Maanen">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Hier staat de titel -->
+
+	<title>Gemeente Amsterdam</title>
+
+	<!-- De link naar het css bestand -->
+
+	<link href="../styles/style.css" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<!-- Het rode logo in een link. met Met een relatieve uitkomst dus url naar eigen site In een section, het
+				witte vlak boven de site.-->
+		<section>
+			<a href="index.html"><img src="../img/amsterdam.png" alt="logo van Gemeente Amsterdam"></a>
+
+			<!-- In een ul met li's vind je mijn amsterdam en english, deze is in de section te vinden die samen
+						met de rest de header vormen -->
+			<ul>
+				<li>Mijn Amsterdam</li>
+				<li>English site</li>
+			</ul>
+		</section>
+		<!-- In deze section zit het hamburger menu en het zoek icon. Met de span maak ik een hamburgermenu en
+					ik werk deze uit op css -->
+		<section>
+			<div>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<!-- Hier staat het loop icon van zoeken in een link in de section -->
+			<a href="#"><img alt="search icon" src="img/icons/loupe.png"></a>
+
+		</section>
+
+		<!-- een formulier met het label search voor de input zoeken met de waarde submit-->
+		<form>
+			<label>Search..</label>
+			<input placeholder="zoeken..." type="text">
+			<input type="submit" value="">
+		</form>
+		<!-- Navigatie met een ul, het eerste list item gaat naar de afval pagina, de list items zijn
+							niet klikbaar, -->
+		<nav>
+			<ul>
+				<li><a href="3">afval</a><a alt="afval"></a>
+					<ul>
+						<li><a href="afval.html">afval</a></li>
+						<li><a href="#">Belastingen en heffingen</a></li>
+						<li><a href="#">Bestuur en Organisatie</a></li>
+						<li><a href="#">Bouw- en verkeersprojecten</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Nieuws</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<!-- Hier begint de body van de pagina, rechts in de hoek kun je de verticale mening button vinden deze heb ik
+			met een button tag gemaakt -->
+	<main class="afvalPage">
+		<section class="dimmer"></section>
+		<button class="mening-knop">Uw mening</button>
+		<a href="home">Home</a>
+		<section class="hero">
+			<h1>Afval en hergebruik</h1>
+			<article>
+				<img src="img/rij_met_ondergrondse_afvalcontainers.jpeg" alt="rij met ondergrondse afvalcontainers">
+			</article>
+
+		</section>
+		<section class="burgerzaken">
+			<article>
+				<h3>Afvalinformatie op adres</h3>
+				<p>Waar laat ik mijn afval</p>
+			</article>
+			<article>
+				<h3>Grof afval</h3>
+				<p>Wegbrengen of laten ophalen</p>
+			</article>
+			<article>
+				<h3>Afval scheiden</h3>
+				<p>Glas, papier, plasticver
+					pakkingen/drinkpakken, gtf en textiel</p>
+			</article>
+			<article>
+				<h3>Afvalcontainers op de kaart</h3>
+				<p>Zoek een afvalcontainer in de buurt</p>
+			</article>
+		</section>
+		<section class="afvalOnderwerpen">
+			<section>
+			<h3>Bedrijfsafval</h3>
+			<ul>
+				<li>Bedrijfsafval</li>
+				</ul>
+		</section>
+		<section>
+			<h3>Hergebruiken</h3>
+			<ul>
+				<li>Repair Cafés</li>
+				<li>Kringloopwinkels</li>
+				</ul>
+		</section>
+		<section>
+			<h3>Afvalcontainers</h3>
+			<ul>
+				<li>Afvalcontainers op de kaart</li>
+				<li>Meld een volle of kapotte container</li>
+				<li>Adopteer een container</li>
+				</ul>
+		</section>
+		<section>
+			<h3>Meer</h3>
+			<ul>
+				<li>Minder afval (website Milieu Centraal)</li>
+				<li>Plaatsing ondergrondse afvalcontainers</li>
+				<li>Volg het beleid Afval en Onderhoud</li>
+				<li>Campagne afval scheiden</li>
+				<li>Afvalgrijpers of afvalringen lenen</li>
+			</ul>
+		</section>
+
+			
+		</section>
+		<hr>
+		<!-- In deze section zie je alle social-media kanalen waar je de 
+								gemeenste amsterdam site op kunt delen. een ul met li's en img's-->
+		<section class="delen">
+			<h4>Deel deze pagina</h4>
+			<ul>
+				<li><a><img src="img/icons/facebook.png" alt="logo"></a></li>
+				<li><a><img src="img/icons/twitter.png" alt="logo"></a></li>
+				<li><a><img src="img/icons/in.png" alt="logo"></a></li>
+				<li><a><img src="img/icons/email.png" alt="logo"></a></li>
+				<li><a><img src="img/icons/printer.png" alt="logo"></a></li>
+
+			</ul>
+		</section>
+	</main>
+	<!-- Hier eindigt de main en begint de footer van de website.-->
+	<footer>
+		<!-- Ik gebruik een hr om een hor-->
+		<section>
+			<article>
+				<h4>Contact</h4>
+				<section>
+					<p>Hebt u een vraag en kunt u het antwoord niet vinden op deze website? Neem dan contact met
+						ons op.</p>
+					<ul>
+						<li><a href="#">Contactformulier</a></li>
+
+						<li><strong>Bel het telefoonnummer <a href="tel:14020">14 020</a></strong>
+							maandag tot en met vrijdag van 08.00 tot 18.00 uur
+						</li>
+
+						<li><a href="https://www.amsterdam.nl/contact/">Contactgegevens en openingstijden</a>
+						</li>
+					</ul>
+				</section>
+			</article>
+
+			<article>
+				<h4>Volg de gemeente</h4>
+				<section>
+					<ul>
+						<li>Nieuws</li>
+						<li>Afval</li>
+						<li>Belastingen en heffingen</li>
+						<li>Bestuur en organisatie</li>
+						<li>Bouw- en verkeersprojecten</li>
+					</ul>
+				</section>
+			</article>
+
+			<article>
+				<h4>Uit in Amsterdam</h4>
+				<section>
+					<p>Benieuwd wat er allemaal te doen is in de stad? Op&nbsp;<a
+							href="https://www.iamsterdam.com">Iamsterdam.com</a>
+						vindt u de beste tips op het gebied van cultuur, uitgaan en evenementen.</p>
+				</section>
+			</article>
+		</section>
+		<section>
+			<ul>
+				<li><a>Over deze site</a></li>
+				<li><a>Privacy</a></li>
+				<li><a>Cookies op de site</a></li>
+				<li><a>Webarchief</a></li>
+			</ul>
+		</section>
+	</footer>
+	<script src="scripts/script.js"></script>
+
+</body>
+
+</html>
