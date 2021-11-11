@@ -5,6 +5,8 @@ deze op natuurlijke wijze op elkaar wordt gestapeld.
 De eigenschap box-sizing definieert hoe de breedte en hoogte van een 
 element worden berekend: moeten ze opvulling en randen bevatten of niet. Borderbox De eigenschappen width en 
 height (en min/max-eigenschappen) omvatten inhoud, opvulling en rand */
+
+/* ======= HEADER DESKTOP EN MOB ======= */
 *, *::after, *::before {
   box-sizing: border-box;
   margin: 0;
@@ -33,7 +35,7 @@ header section:first-of-type {
   margin: 0 auto;
   justify-content: space-between;
 }
-
+/* ======= LOGO Amsterdam ======= hier maak ik het logo even groot als op de originele site.*/
 header section:first-of-type img {
   width: 100%;
   max-width: 150px;
@@ -68,7 +70,8 @@ header nav ul li ul {
 header nav.show {
   max-height: 100vh;
 }
-
+/* ======= GRIJZE SECTION HEADER ======= ik zet het hamburger menu naast het zoek icoon met flex, en de 
+ruimte bepaal ik met space between, ik geef een padding om de section even groot te maken als de originele site. */
 header section:nth-of-type(2) {
   display: flex;
   justify-content: space-between;
@@ -76,12 +79,12 @@ header section:nth-of-type(2) {
   background-color: #f5f5f5;
   max-height: 44px;
 }
-
+/* ======= ZOEK ICOONTJE IN DE HEADER ======= */
 header section:nth-of-type(2) a img {
   width: 20px;
 }
 
-/* hamburger menuutje */ /* ======= HAMBURER MENU ======= */
+/* ======= HAMBURER MENU ======= */
 
 header section div span {
   display: block;
@@ -91,15 +94,16 @@ header section div span {
   margin-bottom: 5px;
   transition: 0.5s;
 }
-
+/* ======= HAMBURER MENU EERSTE STREEP ======= */
 header span:first-of-type.barChange {
   transform: rotate(-45deg) translate(-8px, 5px);
 }
 
+/* ======= HAMBURER MENU TWEEDE STREEP ======= */
 header span:nth-of-type(2).barChange {
   opacity: 0;
 }
-
+/* ======= HAMBURER MENU DERDE STREEP ======= */
 header span:last-of-type.barChange {
   transform: rotate(45deg) translate(-5px, -3px);
 }
@@ -117,7 +121,7 @@ header form {
 header form label {
   display: none;
 }
-
+/* ======= ZOEK INPUT FORMULIER ======= */
 header form input[type="text"] {
   width: 70%;
   height: 40px;
@@ -134,13 +138,13 @@ header form input[type="submit"] {
   width: 40px;
   height: 40px;
   padding: 1em;
-  background-image: url("../img/icons/zoeken.svg");
+  background-image: url("./img/icons/zoeken.svg");
   background-size: 25px 25px;
   background-position: center;
   background-repeat: no-repeat;
   border: none;
 }
-
+/* ======= FORMULIER ZOEKEN UITKLAPPEN ======= */
 header form.show {
   padding: 1em;
   max-height: 100vh;
@@ -152,7 +156,7 @@ header a {
   text-decoration: unset;
 }
 
-/*padding drukt de button naar buiten, posittion fixed
+/*==================== MENING KNOP ===================padding drukt de button naar buiten, posittion fixed
 zorgd dat de knop blijft staan. Door de z index
 stapelt de knop poven op de andere lagen. door de transform draait de knop 
 90 graden.*/
@@ -170,7 +174,7 @@ stapelt de knop poven op de andere lagen. door de transform draait de knop
   font-size: 1.1em;
 }
 
-/*Hier geef ik de hele main paddingn margin en max width*/
+/* ======= HELE MAIN  ======= */
 
 main {
   padding: 18px 1em 0;
@@ -194,7 +198,7 @@ main section.dimmer.show {
 }
 
 /*article*/
-
+/* ============ BLAUWE NIEUWS SECTION =========== position reLATIVE op basis van zijn huidige positie zonder de lay-out te wijzigen. */
 main section.nieuws {
   position: relative;
   background-image: url("../img/oosterpark-herfst_alphons-nieuwenhuis.jpeg");
@@ -241,7 +245,7 @@ main section.burgerzaken {
   flex-wrap: wrap;
   margin: 1em 0;
 }
-
+/* ================ BURGERZAKEN ===================== */
 main section.burgerzaken article {
   background-color: #f5f5f5;
   border-bottom: 2px solid #e6e6e6;
@@ -273,12 +277,12 @@ main section.burgerzaken article h3 {
   order: 2;
   font-size: 1em;
 }
-
+/* =========== ALLE ONDERWERPEN H3  ======= */
 main section.onderwerpen h3 {
   font-size: 1.3em;
   margin-bottom: .5em;
 }
-
+/* ========== ALLE ONDERWERPEN UL LIJST  ======= */
 main section.onderwerpen ul li {
   font-size: 1em;
   font-weight: 700;
@@ -297,7 +301,7 @@ main section.onderwerpen hr {
   margin: 1em 0;
   ;
 }
-
+/* ======= H4 DEEL DEZE PAGINA  ======= */
 main section.delen h4 {
   margin: 1em 0;
 }
@@ -314,13 +318,13 @@ main section.delen ul li {
   width: 30px;
   height: 30px;
 }
-
+/* ======= ICONEN VAN DEEL DEZE PAGINA ======= */
 main section.delen ul li a img {
   width: 100%;
   max-width: 25px;
   filter: grayscale(100%);
 }
-
+/* ============ FOOTER =============== */
 footer {}
 
 footer section:first-of-type {
@@ -376,7 +380,7 @@ footer section:first-of-type ul li a, footer section article a {
   color: #fff;
   text-decoration: underline;
 }
-
+/* ======= ONDERSTE DEEL FOOTER WITTE SPTREEP ======= */
 footer>section:last-of-type {
   padding: 1em;
   margin: auto;
@@ -402,18 +406,18 @@ footer>section:last-of-type ul li::before {
   margin-right: .2em;
   /*color:white;*/
 }
-
+/* ======= ONDERSTE DEEL FOOTER TEKST ======= */
 footer>section:last-of-type ul li a {
   font-weight: 600;
   font-size: .875rem;
 }
 
-/* afval pagina */
+/* ============ AFVAL PAGINA =============== */
 
 main.afvalPage a:first-of-type {
   color: #ddd;
 }
-
+/* ============ AFVAL PAGINA SECTION HERO AFBEELDING =============== */
 main.afvalPage section.hero {
   background-image: none;
   height: unset;
@@ -437,7 +441,7 @@ main.afvalPage section.hero article h3 {
 main.afvalPage section.hero article img {
   width: 100%;
 }
-
+/* ============ AFVAL PAGINA BURGERZAKEN =============== */
 main.afvalPage section.burgerzaken article h3 {
   order: unset;
   font-size: 1em;
@@ -456,7 +460,7 @@ main.afvalPage section.burgerzaken article h3 {
 main.afvalPage section.burgerzaken article p {
   order: 2;
 }
-
+/* ============ AFVAL PAGINA SECTION ONDERWERPEN =============== */
 main.afvalPage section.afvalOnderwerpen section {
   margin-bottom: 20px;
 }
@@ -533,6 +537,7 @@ main.afvalPage section.afvalOnderwerpen section ul li {
     font-size: 1em;
     font-weight: 700;
   }
+  /* ======= AFBEELDING AFVAL PAGINA ======= */
   header nav ul li ul li::before {
     content: ">";
     width: 20px;
