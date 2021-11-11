@@ -30,9 +30,9 @@ function navSearch() {
         dimmer.classList.toggle("show");
         // als de class list de class show bevat komt er een  
         if (navForm.classList.contains("show")){
-            searchIconImg.src = "../img/icons/close.png";
+            searchIconImg.src = "./img/icons/close.png";
         }else {
-            searchIconImg.src = "../img/icons/loupe.png";
+            searchIconImg.src = "./img/icons/loupe.png";
         }
 }
 
